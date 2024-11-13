@@ -13,7 +13,7 @@
         let tg = window.Telegram.WebApp;
         
         document.getElementById("butt1").onclick = function() {
-            document.getElementById("text").innerText = tg.initData;
+            document.getElementById("text").innerText = tg.initDataUnsafe.user.first_name;
             //tg.showAlert(`Добро пожаловать, @${tg.initData}.`);
             //tg.openTelegramLink("https://t.me/BybitCoinsweeper_Bot?startapp");
         }
