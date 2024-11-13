@@ -7,12 +7,14 @@
 </head>
 <body>
     <button id="butt1">click</button>
+    <p id="text"></p>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
         
         document.getElementById("butt1").onclick = function() {
-            tg.showAlert(`Добро пожаловать, @${tg.initData}.`);
+            document.getElementById("text").innerText = tg.initData;
+            //tg.showAlert(`Добро пожаловать, @${tg.initData}.`);
             //tg.openTelegramLink("https://t.me/BybitCoinsweeper_Bot?startapp");
         }
     </script>
