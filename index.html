@@ -10,9 +10,10 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
+        
         document.getElementById("butt1").onclick = function() {
-            tg.openTelegramLink("https://t.me/BybitCoinsweeper_Bot?startapp");
+            tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
+            //tg.openTelegramLink("https://t.me/BybitCoinsweeper_Bot?startapp");
         }
     </script>
     <script>
