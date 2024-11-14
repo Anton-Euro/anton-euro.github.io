@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let tg = window.Telegram.WebApp;
 
 
-    const apiUrl = "https://f7f8-146-120-15-57.ngrok-free.app/webapps?user_id="+tg.initDataUnsafe.user.id;
+    const apiUrl = "https://f7f8-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";
 
     fetch(apiUrl, {
             method: 'GET',
