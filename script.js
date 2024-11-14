@@ -34,7 +34,7 @@ function displayCards(data) {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-            <a onclick="tg.openTelegramLink("${item.bot_url}?startapp");" class="card-link"><img src="${item.photo_url}" alt="${item.title}"></a>
+            <a onclick="tg.openTelegramLink('${item.bot_url}?startapp');" class="card-link"><img src="${item.photo_url}" alt="${item.title}"></a>
             <div class="card-title">${item.title}</div>
         `;
 
