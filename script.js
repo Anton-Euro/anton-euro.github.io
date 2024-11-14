@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchData() {
-    const apiUrl = "https://fc6c-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";
+    const apiUrl = "https://f7f8-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";
 
     fetch(apiUrl, {
             method: 'GET',
