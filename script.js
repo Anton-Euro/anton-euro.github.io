@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
-    let tg = window.Telegram.WebApp;
-        
+    let tg = window.Telegram.WebApp;  
     document.getElementById("butt1").onclick = function() {
         console.log(tg.initDataUnsafe);
         document.getElementById("text").innerText = tg.initDataUnsafe;
@@ -34,9 +33,8 @@ function displayCards(data) {
     data.forEach(item => {
         const card = document.createElement("div");
         card.className = "card";
-
         card.innerHTML = `
-            <a href="${item.bot_url}?startapp" class="card-link" target="_blank"><img src="${item.photo_url}" alt="${item.title}"></a>
+            <a onclick="tg.openTelegramLink("${item.bot_url}?startapp");" class="card-link"><img src="${item.photo_url}" alt="${item.title}"></a>
             <div class="card-title">${item.title}</div>
         `;
 
