@@ -13,19 +13,21 @@ body {
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: #ffffff; */
+    
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     overflow: hidden;
     text-align: center;
 }
 
 .card img {
     width: 100%;
+    border-radius: 8px;
     /* height: 10vh; */
     object-fit: cover;
 }
 .card-title {
+    color: var(--tg-theme-text-color);
     font-size: 70%;
     margin: 0 5% 5% 5%;
 }
