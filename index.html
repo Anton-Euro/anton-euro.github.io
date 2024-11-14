@@ -4,24 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMiniAppsManager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="butt1">click</button>
-    <p id="text"></p>
+    <div id="menu"></div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        let tg = window.Telegram.WebApp;
-        
-        document.getElementById("butt1").onclick = function() {
-            console.log(tg.initDataUnsafe);
-            document.getElementById("text").innerText = tg.initDataUnsafe;
-            //tg.showAlert(`Добро пожаловать, @${tg.initData}.`);
-            //tg.openTelegramLink("https://t.me/BybitCoinsweeper_Bot?startapp");
-        }
-    </script>
-    <script>
-        
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
