@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    gap: 15px;
+    gap: 1.5%;
 }
 
 .card {
@@ -26,6 +26,6 @@ body {
     object-fit: cover;
 }
 .card-title {
-    font-size: 10px;
-    margin: 10px 0;
+    font-size: 70%;
+    margin: 0 5% 5% 5%;
 }
