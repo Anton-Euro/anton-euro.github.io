@@ -6,20 +6,18 @@ body {
 }
 
 #menu {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
     gap: 15px;
 }
 
 .card {
-    /* width: 10%; */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
 }
 
 .card img {
@@ -28,7 +26,6 @@ body {
     object-fit: cover;
 }
 .card-title {
-    color: var(--tg-theme-text-color);
     font-size: 10px;
     margin: 10px 0;
 }
