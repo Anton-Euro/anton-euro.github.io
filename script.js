@@ -3,6 +3,7 @@ tg.expand();
 
 const apiUrl = "https://eab2-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";//+tg.initDataUnsafe.user.id;
 
+
 fetch(apiUrl, {
     method: 'GET',
     headers: {
@@ -22,9 +23,27 @@ fetch(apiUrl, {
 
         container.appendChild(card);
     });
+    let card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <a onclick="send_data_to_bot('add');" class="card-link"><img src="add.png"></a>
+        <div class="card-title">Add webapp</div>
+    `;
+    container.appendChild(card);
+    card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <a onclick="send_data_to_bot('delete');" class="card-link"><img src="delete.png"></a>
+        <div class="card-title">Delete webapp</div>
+    `;
+    container.appendChild(card);
 }).catch(error => console.error("Ошибка при загрузке данных:", error));
 
 
 function go_to_link(href) {
     tg.openTelegramLink(href);
+}
+
+function send_data_to_bot(data) {
+    tg.sendData(data);
 }
