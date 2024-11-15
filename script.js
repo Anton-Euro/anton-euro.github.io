@@ -45,11 +45,11 @@ function go_to_link(href) {
 }
 
 function send_data_to_bot(data) {
-    tg.close();
     fetch('https://eab2-146-120-15-57.ngrok-free.app/event?user_id=1344042437&data='+data, {
         method: 'POST',
         headers: {
             'token': 'qwe123'
         }
     }).then(response => response.json());
+    tg.close();
 }
