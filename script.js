@@ -50,6 +50,7 @@ function send_data_to_bot(data) {
         headers: {
             'token': 'qwe123'
         }
-    }).then(response => response.json());
-    tg.close();
+    }).then(response => response.json()).then(_ => {
+        tg.close();
+    }).catch(error => console.error("Ошибка при загрузке данных:", error));
 }
