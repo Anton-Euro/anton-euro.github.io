@@ -1,10 +1,10 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-const apiUrl = "https://eab2-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";//+tg.initDataUnsafe.user.id;
+const host = "https://eab2-146-120-15-57.ngrok-free.app";
 
 
-fetch(apiUrl, {
+fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
     method: 'GET',
     headers: {
         'token': 'qwe123'
@@ -45,8 +45,8 @@ function go_to_link(href) {
 }
 
 function send_data_to_bot(data) {
-    fetch('https://eab2-146-120-15-57.ngrok-free.app/event?user_id=1344042437&data='+data, {
-        method: 'POST',
+    fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
+        method: 'GET',
         headers: {
             'token': 'qwe123'
         }
