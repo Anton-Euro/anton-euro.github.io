@@ -7,7 +7,7 @@ const host = "https://eab2-146-120-15-57.ngrok-free.app";
 fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
     method: 'GET',
     headers: {
-        'token': process.env.TOKEN
+        'token': tg.initDataUnsafe.start_parameter
     }
 }).then(response => response.json()).then(data => {
     const container = document.getElementById("menu");
@@ -48,7 +48,7 @@ function send_data_to_bot(data) {
     fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
         method: 'GET',
         headers: {
-            'token': process.env.TOKEN
+            'token': tg.initDataUnsafe.start_parameter
         }
     }).then(response => response.json()).then(_ => {
         tg.close();
