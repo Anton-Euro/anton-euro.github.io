@@ -4,7 +4,12 @@ tg.expand();
 const host = "https://eab2-146-120-15-57.ngrok-free.app";
 
 
-fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`).then(response => response.json()).then(data => {
+fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
+    method: 'GET',
+    headers: {
+        'token': tg.initDataUnsafe.start_param
+    }
+}).then(response => response.json()).then(data => {
     const container = document.getElementById("menu");
     container.innerHTML = "";
 
@@ -40,7 +45,12 @@ function go_to_link(href) {
 }
 
 function send_data_to_bot(data) {
-    fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`).then(response => response.json()).then(_ => {
+    fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
+        method: 'GET',
+        headers: {
+            'token': tg.initDataUnsafe.start_param
+        }
+    }).then(response => response.json()).then(_ => {
         tg.close();
     }).catch(error => console.error("Ошибка при загрузке данных:", error));
 }
