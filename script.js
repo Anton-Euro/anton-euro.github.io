@@ -46,7 +46,7 @@ function go_to_link(href) {
 
 function send_data_to_bot(data) {
     fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'token': tg.initDataUnsafe.start_param
         }
