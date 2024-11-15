@@ -13,9 +13,6 @@ body {
 }
 
 .card {
-    /* background-color: #ffffff; */
-    
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     overflow: hidden;
     text-align: center;
 }
@@ -23,9 +20,9 @@ body {
 .card img {
     width: 100%;
     border-radius: 12px;
-    /* height: 10vh; */
     object-fit: cover;
 }
+
 .card-title {
     color: var(--tg-theme-text-color);
     font-size: 70%;
