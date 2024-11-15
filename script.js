@@ -45,12 +45,13 @@ function go_to_link(href) {
 }
 
 function send_data_to_bot(data) {
-    fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
-        method: 'GET',
-        headers: {
-            'token': tg.initDataUnsafe.query_id
-        }
-    }).then(response => response.json()).then(_ => {
-        tg.close();
-    }).catch(error => console.error("Ошибка при загрузке данных:", error));
+    tg.sendData("123");
+    // fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
+    //     method: 'GET',
+    //     headers: {
+    //         'token': tg.initDataUnsafe.query_id
+    //     }
+    // }).then(response => response.json()).then(_ => {
+    //     tg.close();
+    // }).catch(error => console.error("Ошибка при загрузке данных:", error));
 }
