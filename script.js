@@ -1,7 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-const apiUrl = "https://eab2-146-120-15-57.ngrok-free.app/webapps?user_id="+tg.initDataUnsafe.user.id;
+const apiUrl = "https://eab2-146-120-15-57.ngrok-free.app/webapps?user_id=1344042437";//+tg.initDataUnsafe.user.id;
 
 fetch(apiUrl, {
     method: 'GET',

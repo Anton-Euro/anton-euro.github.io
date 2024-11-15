@@ -13,7 +13,8 @@ body {
 }
 
 .card {
-    overflow: hidden;
+    overflow: visible;
+    display: inline-block;
     text-align: center;
 }
 
@@ -26,5 +27,4 @@ body {
 .card-title {
     color: var(--tg-theme-text-color);
     font-size: 70%;
-    margin: 0 5% 10% 5%;
 }
