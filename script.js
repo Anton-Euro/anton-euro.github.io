@@ -22,7 +22,7 @@ fetch(host+`/webapps?user_id=${"1344042437"}`, {
 
         container.appendChild(card);
     });
-    if(data['hide_edit_webapp'] === true) {
+    if(data['hide_edit_webapp'] === false) {
         let card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
