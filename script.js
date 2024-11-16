@@ -23,7 +23,7 @@ fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
 
         container.appendChild(card);
     });
-    if(data['hide_edit_webapp'] == false) {
+    if(data['hide_edit_webapp'] === false) {
         let card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
