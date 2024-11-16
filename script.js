@@ -13,7 +13,7 @@ fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
     const container = document.getElementById("menu");
     container.innerHTML = "";
 
-    data.forEach(item => {
+    data['webapps'].forEach(item => {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
@@ -23,20 +23,22 @@ fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
 
         container.appendChild(card);
     });
-    let card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-        <a onclick="send_data_to_bot('add');" class="card-link"><img src="add.png"></a>
-        <div class="card-title">Add webapp</div>
-    `;
-    container.appendChild(card);
-    card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-        <a onclick="send_data_to_bot('delete');" class="card-link"><img src="delete.png"></a>
-        <div class="card-title">Delete webapp</div>
-    `;
-    container.appendChild(card);
+    if(data['hide_edit_webapp'] === true) {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <a onclick="send_data_to_bot('add');" class="card-link"><img src="add.png"></a>
+            <div class="card-title">Add webapp</div>
+        `;
+        container.appendChild(card);
+        card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <a onclick="send_data_to_bot('delete');" class="card-link"><img src="delete.png"></a>
+            <div class="card-title">Delete webapp</div>
+        `;
+        container.appendChild(card);
+    }
 }).catch(error => console.error("Ошибка при загрузке данных:", error));
 
 
