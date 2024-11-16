@@ -2,7 +2,8 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 const host = "https://33a6-146-120-15-57.ngrok-free.app";
-
+tg.initDataUnsafe.user.id = "1344042437";
+tg.initDataUnsafe.start_param = "EpzeUbKLSUVS9s0EwJMHgYXESWA0bFDzg31NlTEZ1prpMbMRmGAyrHsTMAAQV20l";
 
 fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
     method: 'GET',
