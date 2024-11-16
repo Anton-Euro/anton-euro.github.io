@@ -3,10 +3,11 @@ tg.expand();
 
 const host = "https://33a6-146-120-15-57.ngrok-free.app";
 
-fetch(host+`/webapps?user_id=${"1344042437"}`, {
+
+fetch(host+`/webapps?user_id=${tg.initDataUnsafe.user.id}`, {
     method: 'GET',
     headers: {
-        'token': "EpzeUbKLSUVS9s0EwJMHgYXESWA0bFDzg31NlTEZ1prpMbMRmGAyrHsTMAAQV20l"
+        'token': tg.initDataUnsafe.start_param
     }
 }).then(response => response.json()).then(data => {
     const container = document.getElementById("menu");
@@ -46,10 +47,10 @@ function go_to_link(href) {
 }
 
 function send_data_to_bot(data) {
-    fetch(host+`/event?user_id=${"1344042437"}&data=${data}`, {
+    fetch(host+`/event?user_id=${tg.initDataUnsafe.user.id}&data=${data}`, {
         method: 'POST',
         headers: {
-            'token': "EpzeUbKLSUVS9s0EwJMHgYXESWA0bFDzg31NlTEZ1prpMbMRmGAyrHsTMAAQV20l"
+            'token': tg.initDataUnsafe.start_param
         }
     }).then(response => response.json()).then(_ => {
         tg.close();
